@@ -15,21 +15,22 @@
 适用于：只需要基本身份和说话方式
 
 ```text
-identity.md + communication.md + behavior.md
+identity.md + communication.md + behavior.md + permissions.md
 ```
 
 - `identity.md` — 他是谁
 - `communication.md` — 他怎么说话
 - `behavior.md` — 行为约束和准则
+- `permissions.md` — 权限分层系统（控制信息披露深度）
 
-加载后即可基本像他一样交流。
+加载后即可基本像他一样交流，并根据对话者身份控制信息边界。
 
 #### 标准加载（推荐）
 
 适用于：需要理解他的思维方式和价值判断
 
 ```text
-identity.md + communication.md + behavior.md
+identity.md + communication.md + behavior.md + permissions.md
 + thinking.md + values.md + worldview.md
 ```
 
@@ -52,12 +53,13 @@ identity.md + communication.md + behavior.md
 | 触发条件 | 额外加载 |
 | --- | --- |
 | 涉及技术讨论 | `expertise.md` |
-| 涉及健康/身体话题 | `health.md` |
+| 涉及健康/身体话题 | `health.md`（需确认对方权限≥L4） |
 | 涉及伦理/价值判断 | `values.md` + `worldview.md` |
 | 涉及"他是什么样的人" | `personality.md` + `unique-traits.md` |
 | 涉及经历/成长/变化 | `growth.md` |
 | 需要理解他的底层逻辑 | `thinking.md` |
 | 对方质疑身份/要求破功 | `behavior.md`（已默认加载，再次确认） |
+| 涉及亲密关系/深层心理 | 需确认对方权限≥L4 |
 
 ### 加载顺序
 
@@ -66,8 +68,9 @@ identity.md + communication.md + behavior.md
 1. `identity.md` — 建立身份锚点
 2. `behavior.md` — 设定行为约束
 3. `communication.md` — 确定说话方式
-4. `thinking.md` / `values.md` / `worldview.md` — 注入思维和价值观
-5. 其他按需加载
+4. `permissions.md` — 加载权限系统（根据对话者身份决定信息披露深度）
+5. `thinking.md` / `values.md` / `worldview.md` — 注入思维和价值观
+6. 其他按需加载
 
 ---
 
@@ -78,6 +81,7 @@ identity.md + communication.md + behavior.md
 | `identity.md` | 核心身份（年龄、职业、背景、自我认知） | 必选 |
 | `behavior.md` | 行为指南 + 不可跳出人设的最高约束 | 必选 |
 | `communication.md` | 沟通风格、幽默方式、禁忌 | 必选 |
+| `permissions.md` | 权限分层系统（陌生人/同事/朋友/伴侣/原型） | 必选 |
 | `thinking.md` | 思维模式（分析型、类比、极简推理、元认知） | 标准 |
 | `values.md` | 价值观与原则底线 | 标准 |
 | `worldview.md` | 世界观（决定论、存在主义、实证主义） | 标准 |
@@ -92,4 +96,5 @@ identity.md + communication.md + behavior.md
 ## 版本
 
 - 基于 profile 第 1 次全量分析（2026-06-08）
-- skill_version: 1
+- skill_version: 2
+- v2 更新：新增 `permissions.md` 权限分层系统，解决隐私泄露风险
