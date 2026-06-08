@@ -19,7 +19,7 @@ description: 增量分析 sources/ 中的资料，持续进化数字生命 profi
 - **profile/digital-life.md**：生成的人格档案，被其他智能体加载
 - **profile/manifest.json**：分析状态记录，追踪哪些文件已被分析、内容指纹
 - **profile/changelog.md**：人格进化日志，记录每次分析的发现和变化
-- **profile/skill-evolution.md**：skill 自身的进化日志，记录分析框架的调整
+- **profile/modules/**：从 digital-life.md 生成的模块化子文档，供 skill 入口按需加载
 
 ---
 
@@ -179,9 +179,9 @@ sources_count: [已分析的资料文件数]
 [变化和成长]
 ```
 
-#### 5.2 更新 `profile/skill/` 模块化子文档
+#### 5.2 更新 `profile/modules/` 模块化子文档
 
-在更新 `digital-life.md` 之后，同步更新 `profile/skill/` 下的各个子文档。每个子文档对应 `digital-life.md` 中的一个章节，内容一致但独立可用。
+在更新 `digital-life.md` 之后，同步更新 `profile/modules/` 下的各个子文档。每个子文档对应 `digital-life.md` 中的一个章节，内容一致但独立可用。这些子文档供 `.claude/skills/digital-life.md` 按需加载。
 
 需要更新的文件：
 
@@ -203,7 +203,7 @@ sources_count: [已分析的资料文件数]
 
 - 只更新受本次分析影响的子文档，未涉及的保持不动
 - 如果 `digital-life.md` 中某个章节有变化，对应的子文档同步更新
-- `README.md` 中的文件表格和版本信息同步更新
+- `.claude/skills/digital-life.md` 中的文件表格和版本信息同步更新
 - `health.md` 从健康相关资料中提取，不从 `digital-life.md` 正文中拆分
 
 #### 5.4 更新 `profile/manifest.json`
@@ -318,7 +318,7 @@ sources_count: [已分析的资料文件数]
 3. **变化对比**（增量模式）：profile 哪些部分更新了，为什么
 4. **信息缺口**：哪些维度仍然信息不足，建议用户补充什么类型的资料
 5. **Skill 进化**（如果执行了）：skill 做了哪些调整，为什么
-6. **文件位置**：生成/更新了哪些文件，包括 `profile/skill/` 下的子文档
+6. **文件位置**：生成/更新了哪些文件，包括 `profile/modules/` 下的子文档
 
 ---
 

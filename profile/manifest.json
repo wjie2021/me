@@ -1,6 +1,6 @@
 {
   "last_analyzed": "2026-06-08",
-  "mode": "full",
+  "mode": "incremental",
   "skill_version": 1,
   "sources": {
     "me.md": {
@@ -17,7 +17,12 @@
       "hash": "b1c2d3e4f5a6-ai-notes-v1",
       "analyzed_at": "2026-06-08",
       "dimensions": ["思维", "知识"]
+    },
+    "个人随笔.txt": {
+      "hash": "c7d8e9f0a1b2-personal-essay-v1",
+      "analyzed_at": "2026-06-08",
+      "dimensions": ["思维", "世界观", "价值观", "性格", "印记"]
     }
   },
-  "profile_version": 1
+  "profile_version": 2
 }
