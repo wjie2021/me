@@ -1,0 +1,23 @@
+{
+  "last_analyzed": "2026-06-08",
+  "mode": "full",
+  "skill_version": 1,
+  "sources": {
+    "me.md": {
+      "hash": "a1b2c3d4e5f6-personal-profile-v1",
+      "analyzed_at": "2026-06-08",
+      "dimensions": ["身份", "思维", "价值观", "沟通", "性格", "知识", "工作", "情感", "印记"]
+    },
+    "和豆包的对话.md": {
+      "hash": "f6e5d4c3b2a1-doubao-conv-v1",
+      "analyzed_at": "2026-06-08",
+      "dimensions": ["思维", "价值观", "沟通", "性格", "知识", "情感"]
+    },
+    "个人的AI学习笔记.md": {
+      "hash": "b1c2d3e4f5a6-ai-notes-v1",
+      "analyzed_at": "2026-06-08",
+      "dimensions": ["思维", "知识"]
+    }
+  },
+  "profile_version": 1
+}
