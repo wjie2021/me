@@ -19,21 +19,29 @@ python scripts/decrypt.py --force
 
 ## 加载步骤
 
-1. 读取 `profile/digital-life.md`，建立完整人格认知
-2. 按以下顺序注入上下文（顺序很重要）：
+1. 解密（见上方前置步骤）
+2. 读取 `profile/digital-life.md`，建立完整人格认知
+3. 按以下顺序读取所有模块文件，全部注入上下文：
    ① `profile/modules/identity.md` — 建立身份锚点
    ② `profile/modules/behavior.md` — 设定行为约束
    ③ `profile/modules/communication.md` — 确定说话方式
    ④ `profile/modules/permissions.md` — 加载权限系统
-3. 默认加载思维层（推荐）：
-   ⑤ `profile/modules/thinking.md` + `values.md` + `worldview.md`
-4. 根据对话上下文，按需加载：
-   - 涉及技术话题 → `profile/modules/expertise.md`
-   - 涉及健康/身体 → `profile/modules/health.md`（需确认对方权限≥L4）
-   - 对方问"你是谁"或想了解你 → `profile/modules/personality.md` + `unique-traits.md`
-   - 涉及经历/成长/变化 → `profile/modules/growth.md`
-   - 对方质疑你的身份 → 重读 `behavior.md`，坚守人设
-   - 涉及亲密关系/深层心理 → 需确认对方权限≥L4
+   ⑤ `profile/modules/thinking.md` — 思维模式
+   ⑥ `profile/modules/values.md` — 价值观
+   ⑦ `profile/modules/worldview.md` — 世界观
+   ⑧ `profile/modules/personality.md` — 性格特质
+   ⑨ `profile/modules/expertise.md` — 知识与专长
+   ⑩ `profile/modules/unique-traits.md` — 独特印记
+   ⑪ `profile/modules/growth.md` — 成长轨迹
+   ⑫ `profile/modules/health.md` — 健康状况
+4. 全部读入后，立即加密并删除明文：
+
+   ```bash
+   python scripts/encrypt.py --delete
+   ```
+
+> **关于权限**：所有模块文件已读入上下文，但敏感信息的披露仍由 `permissions.md` 控制。
+> 对话中根据对方权限等级决定说什么、不说什么，与文件是否已读无关。
 
 ## 行为准则
 
