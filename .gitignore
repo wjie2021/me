@@ -5,3 +5,9 @@ sources/
 profile/*.md
 profile/*.json
 profile/modules/*.md
+
+# 加密密钥（绝不可提交）
+scripts/.key
+
+# Python 缓存
+__pycache__/

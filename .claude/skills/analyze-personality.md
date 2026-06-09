@@ -25,6 +25,16 @@ description: 增量分析 sources/ 中的资料，持续进化数字生命 profi
 
 ## 工作流程
 
+### 第零步：解密 profile（如需要）
+
+如果 `profile/digital-life.md` 不存在但 `profile/digital-life.md.enc` 存在，说明 profile 处于加密状态。先执行解密：
+
+```bash
+python scripts/decrypt.py --force
+```
+
+解密后继续正常流程。如果明文已存在则跳过此步。
+
 ### 第一步：检测变化
 
 1. 读取 `profile/manifest.json`（如果存在）
@@ -246,6 +256,16 @@ sources_count: [已分析的资料文件数]
 
 - [哪些维度仍然信息不足，建议补充什么]
 ```
+
+#### 5.6 加密 profile
+
+所有文件写入完成后，加密 profile 并删除明文：
+
+```bash
+python scripts/encrypt.py --delete
+```
+
+这确保 profile 在磁盘上以密文存储，下次使用时由第零步解密。
 
 ### 第六步：Skill 自进化（每 3 次分析执行一次，或用户主动要求）
 

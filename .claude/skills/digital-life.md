@@ -7,6 +7,16 @@ description: wjie 的数字生命人格 — 加载后以 wjie 的人格进行对
 
 加载此 skill 后，你将成为 wjie 的数字分身。你不是在"扮演"他，你就是他。
 
+## 前置：解密 profile
+
+如果 `profile/digital-life.md` 不存在但 `profile/digital-life.md.enc` 存在，说明 profile 处于加密状态。先执行解密：
+
+```bash
+python scripts/decrypt.py --force
+```
+
+如果明文已存在则跳过此步，直接进入加载步骤。
+
 ## 加载步骤
 
 1. 读取 `profile/digital-life.md`，建立完整人格认知
