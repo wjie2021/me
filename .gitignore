@@ -1,2 +1,7 @@
 # 私密素材，不上传
 sources/
+
+# profile 明文（加密后由 .enc 替代，不推远程）
+profile/*.md
+profile/*.json
+profile/modules/*.md
